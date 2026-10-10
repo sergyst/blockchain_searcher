@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: blockchain-searcher
+  mvc:
+    problemdetails:
+      enabled: true
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: 8080
+
+blockchain:
+  default-network: sepolia
+  http:
+    connect-timeout: 5s
+    read-timeout: 20s
+  # Blockscout list endpoints are paginated (50 items/page); stop after this many pages.
+  blockscout-max-pages: 10
+  # Extra events to decode locally, in human-readable form. Matches show up as EVENT_PARAMETER.
+  extra-events: []
+  #  - "TransactionExecuted(address indexed destination, bytes indexed result)"
+  networks:
+    sepolia:
+      chain-id: 11155111
+      # Public endpoints are rate-limited; point this at your own Infura/Alchemy URL for real use.
+      rpc-url: ${SEPOLIA_RPC_URL:https://ethereum-sepolia-rpc.publicnode.com}
+      blockscout-url: ${SEPOLIA_BLOCKSCOUT_URL:https://eth-sepolia.blockscout.com}
+      # Set true only if your node allows debug_traceTransaction (callTracer).
+      trace-enabled: ${SEPOLIA_TRACE_ENABLED:false}
+    mainnet:
+      chain-id: 1
+      rpc-url: ${MAINNET_RPC_URL:https://ethereum-rpc.publicnode.com}
+      blockscout-url: ${MAINNET_BLOCKSCOUT_URL:https://eth.blockscout.com}
+      trace-enabled: ${MAINNET_TRACE_ENABLED:false}
+
+logging:
+  level:
+    com.blockchainsearcher: INFO

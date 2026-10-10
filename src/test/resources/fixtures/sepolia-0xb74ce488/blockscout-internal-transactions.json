@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "index": 1,
+      "type": "call",
+      "from": {
+        "hash": "0xE8ADD70Ce3D1FF164201976D0C6dc62007352e9B",
+        "name": null
+      },
+      "to": {
+        "hash": "0x645Ba1c8aB1cb65Cf541F97a4f0cf30f58A471E4",
+        "name": "ERC1967Proxy"
+      },
+      "value": "0",
+      "success": true,
+      "error": null,
+      "created_contract": null
+    },
+    {
+      "index": 2,
+      "type": "delegatecall",
+      "from": {
+        "hash": "0x645Ba1c8aB1cb65Cf541F97a4f0cf30f58A471E4",
+        "name": "ERC1967Proxy"
+      },
+      "to": {
+        "hash": "0xec1b67a9D421627970B584805adC402E2F54626d",
+        "name": "TransferAgentModule_V5"
+      },
+      "value": "0",
+      "success": true,
+      "error": null,
+      "created_contract": null
+    },
+    {
+      "index": 6,
+      "type": "call",
+      "from": {
+        "hash": "0x645Ba1c8aB1cb65Cf541F97a4f0cf30f58A471E4",
+        "name": "ERC1967Proxy"
+      },
+      "to": {
+        "hash": "0xEb0a4C608feD1B82DCDC98b565008316893CD6a0",
+        "name": "ERC1967Proxy"
+      },
+      "value": "0",
+      "success": true,
+      "error": null,
+      "created_contract": null
+    }
+  ],
+  "next_page_params": null
+}

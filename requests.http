@@ -1,0 +1,17 @@
+### BENJI dividend for my address (Sepolia)
+GET http://localhost:8080/api/v1/transactions/0xb74ce488dfce325579e0791b9444b3bfbe07b68a0bd038690a445a8974e43f10/involvement?address=0x6B017Cb1a9A13d05b6ac24e978E0e6E683B418fa&network=sepolia
+
+### Same search through Web3j
+GET http://localhost:8080/api/v1/transactions/0xb74ce488dfce325579e0791b9444b3bfbe07b68a0bd038690a445a8974e43f10/involvement/web3j?address=0x6B017Cb1a9A13d05b6ac24e978E0e6E683B418fa&network=sepolia
+
+### Web3j, only logs emitted by the BENJI dividend contract
+GET http://localhost:8080/api/v1/transactions/0xb74ce488dfce325579e0791b9444b3bfbe07b68a0bd038690a445a8974e43f10/involvement/web3j?address=0x6B017Cb1a9A13d05b6ac24e978E0e6E683B418fa&network=sepolia&contract=0x645Ba1c8aB1cb65Cf541F97a4f0cf30f58A471E4
+
+### The relayer that sent the transaction
+GET http://localhost:8080/api/v1/transactions/0xb74ce488dfce325579e0791b9444b3bfbe07b68a0bd038690a445a8974e43f10/involvement?address=0x3263f8e2Ca060bAE03bAB3d7D41afB645Ec2B370
+
+### Configured networks
+GET http://localhost:8080/api/v1/networks
+
+### Validation error (problem+json)
+GET http://localhost:8080/api/v1/transactions/0x1234/involvement?address=nope
