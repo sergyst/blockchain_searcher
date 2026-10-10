@@ -9,3 +9,4 @@ target/
 .project
 .classpath
 .DS_Store
+.github/modernize/
